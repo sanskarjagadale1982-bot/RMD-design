@@ -1,0 +1,359 @@
+/* =====================
+   Reset & Base
+   ===================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background-color: #cdcdcd;
+  color: #333;
+  padding-top: 70px; /* space for fixed navbar */
+}
+
+/* =====================
+   Header & Navigation
+   ===================== */
+header {
+  width: 100%;
+  position: relative;
+}
+
+nav {
+  width: 100%;
+  height: 70px;
+  /* background: #fff398; */
+
+  box-shadow:  inset 5px 5px 50px #ffffff; /* h-offset, v-offset, blur, spread, color */
+
+  backdrop-filter: blur(5px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+}
+
+.logo {
+  color: #241c11;
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.menu ul {
+  list-style: none;
+  display: flex;
+}
+
+.menu ul li {
+  margin-left: 30px;
+}
+
+.menu ul li a {
+  text-decoration: none;
+  color: #2a271c;
+  font-size: 15px;
+  transition: color 0.3s ease;
+}
+
+.menu ul li a:hover {
+  color: #ffffff;
+}
+
+/* =====================
+   Hero Background
+   ===================== */
+.bg {
+  width: 100%;
+  height: calc(100vh - 70px);
+  background:
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c");
+  background-size: cover;
+  background-position: center;
+
+  position: relative; /* IMPORTANT */
+}
+
+/* Hero Content */
+.main {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  text-align: center;
+  color: #fff;
+  padding: 20px;
+}
+
+.main h1 {
+  font-size: 48px;
+  margin-bottom: 15px;
+  text-shadow: #3d3d3d 2px 2px 4px;
+  
+}
+
+.main p {
+  font-size: 18px;
+  margin-bottom: 25px;
+
+  border-radius: 45px;
+  width: fit-content;
+  padding: 10px 20px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
+  color: #f4f4f4;
+   backdrop-filter: blur(10px);
+   border:#000;
+}
+
+/* Button */
+.btn {
+  display: inline-block;
+  padding: 12px 30px;
+background-color: #b08b3c;
+  color: #111;
+  font-weight: bold;
+  border-radius: 25px;
+  text-decoration: none;
+  transition: background 0.3s ease;
+
+    box-shadow: 10px 10px 14px rgba(0, 0, 0, 0.3);
+}
+
+.btn:hover {
+
+backdrop-filter: blur(5px);
+}
+
+/* =====================
+   About Section
+   ===================== */
+.about {
+  background: #fff;
+  padding: 80px 50px;
+}
+
+.about h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.about p {
+  max-width: 800px;
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+/* =====================
+   Image Gallery
+   ===================== */
+.gallery {
+  background: #f9f9f9;
+  padding: 80px 50px;
+}
+
+.gallery h2 {
+  text-align: center;
+  font-size: 34px;
+  margin-bottom: 40px;
+  color: #111;
+}
+
+.gallery-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  background: #000;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 260px;
+  object-fit: cover;
+  display: block;
+  transition:
+    transform 0.5s ease,
+    opacity 0.5s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.1);
+  opacity: 0.85;
+}
+
+/* =====================
+   Responsive
+   ===================== */
+@media (max-width: 768px) {
+  nav {
+    padding: 0 20px;
+  }
+
+  .menu ul li {
+    margin-left: 15px;
+  }
+
+  .main h1 {
+    font-size: 32px;
+  }
+
+  .about,
+  .gallery {
+    padding: 50px 20px;
+  }
+
+  .gallery-item img {
+    height: 220px;
+  }
+}
+/* =====================
+   Enquiry Section
+   ===================== */
+
+.enquiry {
+  background: #111;
+  color: #fff;
+  padding: 80px 50px;
+  text-align: center;
+}
+
+.enquiry h2 {
+  font-size: 34px;
+  margin-bottom: 10px;
+}
+
+.enquiry p {
+  font-size: 16px;
+  margin-bottom: 40px;
+  color: #ccc;
+}
+
+/* Form */
+.enquiry-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.enquiry-form input,
+.enquiry-form textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: none;
+  outline: none;
+  border-radius: 6px;
+  font-size: 15px;
+}
+
+.enquiry-form textarea {
+  resize: none;
+}
+
+.enquiry-form input::placeholder,
+.enquiry-form textarea::placeholder {
+  color: #777;
+}
+
+/* Button uses your existing .btn */
+.enquiry .btn {
+  background: #c9a24d;
+  color: #111;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.enquiry .btn:hover {
+  background: #b08b3c;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .enquiry {
+    padding: 50px 20px;
+  }
+
+  .enquiry h2 {
+    font-size: 28px;
+  }
+}
+/* =====================
+   Footer Section
+   ===================== */
+
+.footer {
+  background: #0d0d0d;
+  color: #fff;
+  padding: 50px 20px 0;
+  text-align: center;
+}
+
+.footer-content h3 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  letter-spacing: 1px;
+}
+
+.footer-content p {
+  font-size: 14px;
+  color: #bbb;
+  max-width: 500px;
+  margin: 0 auto 25px;
+}
+
+/* Social Links */
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  color: #c9a24d;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+  color: #fff;
+}
+
+/* Bottom Bar */
+.footer-bottom {
+  margin-top: 40px;
+  padding: 15px 0;
+  background: #000;
+  font-size: 13px;
+  color: #888;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .social-links {
+    gap: 15px;
+  }
+}
+html {
+  scroll-behavior: smooth;
+}

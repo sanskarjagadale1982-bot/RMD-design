@@ -1,0 +1,105 @@
+body{
+    margin:0px;
+    padding:0px;
+
+}
+.services-section {
+  position: relative;
+  padding: 90px 20px;
+  background-image: url("https://images.unsplash.com/photo-1600585154340-be6161a56a0c");
+  background-size: cover;
+  background-position: center;
+  font-family: Arial, sans-serif;
+}
+
+.services-section .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.services-section .content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  color: #fff;
+}
+
+.services-section h2 {
+  font-size: 38px;
+  margin-bottom: 10px;
+}
+
+.services-section .subtitle {
+  font-size: 16px;
+  opacity: 0.85;
+  margin-bottom: 50px;
+}
+
+.services-container {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 25px;
+}
+
+/* SAME COLOR FOR ALL CARDS */
+.service-card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+  padding: 30px 25px;
+  color: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.25);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.service-card:hover {
+  transform: translateY(-10px);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+.service-card h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.service-card .price {
+  font-size: 20px;
+  font-weight: bold;
+  color: #f2c27b;
+  margin-bottom: 20px;
+}
+
+.service-card ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 25px;
+}
+
+.service-card ul li {
+  font-size: 14px;
+  margin-bottom: 8px;
+  opacity: 0.9;
+}
+
+.service-card button {
+  padding: 12px 26px;
+  border: none;
+  border-radius: 30px;
+  background: #f2c27b;
+  color: #222;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.service-card button:hover {
+  background: #ddb066;
+}
+a{
+    text-decoration: none;
+    color:#111111;
+    font-weight: 100;
+}
